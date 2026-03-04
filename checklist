@@ -1,0 +1,8 @@
+1. Check that fields are visible
+2. Apply for loan with valid data
+3. Apply for load with invalid data:
+3.1. Non-number characters for amount and check error
+3.2. Negative amount and check error
+3.2. 0 as amount and check error
+4. Check that loan calculation is visible
+5. Choose Estonian and continue and check for success
