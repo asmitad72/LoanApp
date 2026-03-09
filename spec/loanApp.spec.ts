@@ -62,3 +62,9 @@ test.describe('Apply for loan with valid data', () => {
 test('Viewport validation', async ({ page }) => {
     await expect(applicationPage.applyForLoanButton).not.toBeInViewport();
 })
+
+//loan application page scrolling
+test('Loan application page scroll', async ({ page }) => {
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await expect(applicationPage.applyForLoanButton2).toBeVisible();
+})
