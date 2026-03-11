@@ -67,4 +67,17 @@ test('Viewport validation', async ({ page }) => {
 test('Loan application page scroll', async ({ page }) => {
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await expect(applicationPage.applyForLoanButton2).toBeVisible();
+    await expect(applicationPage.applyForLoanButton2).toBeInViewport();
 })
+
+//loan application page slider
+test('loan amount slider test', async ({ page }) => {
+    const amountSlider = page.getByTestId('id-small-loan-calculator-field-amount-slider');
+    // Move slider to 500 (minimum)
+    await amountSlider.fill('500');
+    // Move slider to 5000 (middle)
+    await amountSlider.fill('5000');
+    // Move slider to 10000 (maximum)
+    await amountSlider.fill('10000');
+});
+
