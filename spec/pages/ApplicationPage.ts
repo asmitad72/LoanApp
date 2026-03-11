@@ -7,6 +7,7 @@ export class ApplicationPage {
     readonly errorMessage ;
     readonly monthlyPayment;
     readonly applyForLoanButton;
+    readonly applyForLoanButton2;
     constructor(page: Page) {
         this.amountInput = page.getByTestId('id-small-loan-calculator-field-amount');
         this.applyButton = page.getByTestId('id-small-loan-calculator-field-apply');
@@ -14,5 +15,6 @@ export class ApplicationPage {
         this.errorMessage = page.getByTestId('id-small-loan-calculator-field-error');
         this.monthlyPayment = page.getByTestId('ib-small-loan-calculator-field-monthlyPayment');
         this.applyForLoanButton = page.getByTestId('id-image-element-button-image-1');
+        this.applyForLoanButton2 = page.getByTestId('id-image-element-button-image-2');
     }
 }
